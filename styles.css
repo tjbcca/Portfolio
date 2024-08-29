@@ -171,3 +171,8 @@
   text-align: center;
   margin: auto;
 }
+@media screen and (max-width: 600px) {
+  .mparagraph {
+    font-size: 14px;
+  }
+}
