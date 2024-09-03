@@ -171,12 +171,12 @@
   text-align: center;
   margin: auto;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .mparagraph {
-    font-size: 14px;
+    font-size: 20pt;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mparagraph {
     text-align: justify;
   }
