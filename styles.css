@@ -18,8 +18,8 @@
   text-align: center;
   padding: 16px 16px;
   text-decoration: none;
-  text-shadow: -1px -1px 0 rgb(41, 38, 50), 1px -1px 0 rgb(41, 38, 50),
-    -1px 1px 0 rgb(41, 38, 50), 1px 1px 0 rgb(41, 38, 50);
+  text-shadow: -1px -1px 0 rgb(41, 38, 50), 1px -1px 0 rgb(41, 38, 50), -1px 1px 0 rgb(41, 38, 50),
+    1px 1px 0 rgb(41, 38, 50);
 }
 .navsB {
   display: block;
@@ -53,8 +53,8 @@
   margin: auto;
   font-family: "Courier New", Courier, monospace;
   color: rgb(222, 255, 255);
-  text-shadow: -4.5px -4.5px 0 rgb(41, 38, 50), 1px -1px 0 rgb(41, 38, 50),
-    -1px 1px 0 rgb(41, 38, 50), 1px 1px 0 rgb(41, 38, 50);
+  text-shadow: -4.5px -4.5px 0 rgb(41, 38, 50), 1px -1px 0 rgb(41, 38, 50), -1px 1px 0 rgb(41, 38, 50),
+    1px 1px 0 rgb(41, 38, 50);
   padding-top: 18pt;
 }
 .sectionHead {
@@ -103,8 +103,8 @@
   margin: auto;
   font-family: "Courier New", Courier, monospace;
   color: rgb(222, 255, 255);
-  text-shadow: -2.5px -2.5px 0 rgb(41, 38, 50), 1px -1px 0 rgb(41, 38, 50),
-    -1px 1px 0 rgb(41, 38, 50), 1px 1px 0 rgb(41, 38, 50);
+  text-shadow: -2.5px -2.5px 0 rgb(41, 38, 50), 1px -1px 0 rgb(41, 38, 50), -1px 1px 0 rgb(41, 38, 50),
+    1px 1px 0 rgb(41, 38, 50);
 }
 .blue {
   color: blue;
@@ -123,7 +123,7 @@
 .projectPics {
   height: auto;
   width: auto;
-  max-height: 20em;
+  max-height: 250px;
   max-width: 20em;
   border: black;
   border-radius: 5pt;
@@ -142,7 +142,11 @@
   border-style: groove;
   border-radius: 1em;
   width: 21em;
-  height: 28em;
+  height: 35em;
+}
+.projectsTable td {
+  height: 255px;
+  max-height: 255px;
 }
 .projectLink {
   font-size: 30px;
@@ -170,6 +174,12 @@
   height: auto;
   text-align: center;
   margin: auto;
+  border-style: groove;
+}
+.portrait:hover {
+  content: url("images/sunglasses.png");
+  max-height: 340px;
+  max-width: 284px;
 }
 @media screen and (max-width: 1024px) {
   .mparagraph {
@@ -180,4 +190,33 @@
   .mparagraph {
     text-align: justify;
   }
+}
+.animA {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+.animB {
+  opacity: 0;
+  animation: fadeIn 5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pop-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animC {
+  animation: pop-in 0.8s ease-in-out;
 }
